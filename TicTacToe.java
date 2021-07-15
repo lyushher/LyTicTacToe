@@ -4,7 +4,6 @@ import java.util.*;
 import javax.swing.*;
 
 public class TicTacToe implements ActionListener{
-	
 	JFrame frame = new JFrame();
 	JLabel textfield = new JLabel();
 	JPanel title = new JPanel();
@@ -46,7 +45,6 @@ public class TicTacToe implements ActionListener{
 		frame.add(title,BorderLayout.NORTH);
 		frame.add(ButtonPanel, BorderLayout.CENTER);
 		frame.setBounds(450,130,600,600);
-			
 		turn();
 	}
 	
@@ -63,7 +61,6 @@ public class TicTacToe implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
 		for(int x=0;x<9;x++) {
 			if(e.getSource()==buttons[x]) {
 				if(player1) {
