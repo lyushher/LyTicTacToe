@@ -26,12 +26,12 @@ public class TicTacToe implements ActionListener{
 		frame.setLayout(new BorderLayout());
 		frame.setVisible(true);
 		
-		title.setLayout(new BorderLayout());
 		title.setBounds(0,0,800,100);
+		title.setLayout(new BorderLayout());
 		
+		ButtonPanel.setBounds(100,100,300,150);
 		ButtonPanel.setLayout(new GridLayout(3,3));
 		ButtonPanel.setBackground(new Color(224,238,238));
-		ButtonPanel.setBounds(100,100,300,150);
 
 		for(int x=0;x<9;x++) {
 			buttons[x] = new JButton();
