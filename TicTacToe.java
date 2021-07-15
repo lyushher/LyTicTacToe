@@ -26,12 +26,12 @@ public class TicTacToe implements ActionListener{
 		frame.setLayout(new BorderLayout());
 		frame.setVisible(true);
 		
+		title.setLayout(new BorderLayout());
+		title.setBounds(0,0,800,100);
+		
 		ButtonPanel.setLayout(new GridLayout(3,3));
 		ButtonPanel.setBackground(new Color(224,238,238));
 		ButtonPanel.setBounds(100,100,300,150);
-		
-		title.setLayout(new BorderLayout());
-		title.setBounds(0,0,800,100);
 
 		for(int x=0;x<9;x++) {
 			buttons[x] = new JButton();
@@ -41,10 +41,10 @@ public class TicTacToe implements ActionListener{
 			buttons[x].addActionListener(this);			
 		}
 		
-		title.add(textfield);
-		frame.add(title,BorderLayout.NORTH);
-		frame.add(ButtonPanel, BorderLayout.CENTER);
 		frame.setBounds(450,130,600,600);
+		frame.add(ButtonPanel, BorderLayout.CENTER);
+		frame.add(title,BorderLayout.NORTH);
+		title.add(textfield);
 		turn();
 	}
 	
