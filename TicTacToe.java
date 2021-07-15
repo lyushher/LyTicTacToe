@@ -5,12 +5,12 @@ import javax.swing.*;
 
 public class TicTacToe implements ActionListener{
 	JFrame frame = new JFrame();
-	JLabel textfield = new JLabel();
 	JPanel title = new JPanel();
 	JPanel ButtonPanel = new JPanel();
+	JLabel textfield = new JLabel();
 	JButton[] buttons = new JButton[9];
 	Random computer = new Random();
-	boolean player1;
+	boolean player;
 	
 	TicTacToe(){
 		
@@ -50,11 +50,11 @@ public class TicTacToe implements ActionListener{
 	
 	public void turn() {
 		if(computer.nextInt(2)==0) {
-			player1=true;
+			player=true;
 			textfield.setText("X turn!");            
 		}
 		else {
-			player1=false;
+			player=false;
 			textfield.setText("O turn!");
 		}
 	}
@@ -63,11 +63,11 @@ public class TicTacToe implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		for(int x=0;x<9;x++) {
 			if(e.getSource()==buttons[x]) {
-				if(player1) {
+				if(player) {
 					if(buttons[x].getText()=="") {
 						buttons[x].setForeground(new Color(205,38,38));
 						buttons[x].setText("X");
-						player1=false;
+						player=false;
 						textfield.setText("O turn!");
 						
 						winner_control();
@@ -78,7 +78,7 @@ public class TicTacToe implements ActionListener{
 					if(buttons[x].getText()=="") {
 						buttons[x].setForeground(new Color(58,95,205));
 						buttons[x].setText("O");
-						player1=true;
+						player=true;
 						textfield.setText("X turn!");
 						
 						winner_control();
