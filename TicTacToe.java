@@ -91,7 +91,6 @@ public class TicTacToe implements ActionListener{
 	public void winner_control() {
 		
 		// Player X win conditions;
-		
 		if((buttons[0].getText()=="X")&&(buttons[1].getText()=="X")&&(buttons[2].getText()=="X")) {
 			xWins(0,1,2);
 		}
@@ -118,7 +117,6 @@ public class TicTacToe implements ActionListener{
 		}
 		
 		// Player O win conditions;
-		
 		if((buttons[0].getText()=="O")&&(buttons[1].getText()=="O")&&(buttons[2].getText()=="O")) {
 			oWins(0,1,2);
 		}
