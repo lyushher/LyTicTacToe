@@ -13,7 +13,6 @@ public class TicTacToe implements ActionListener{
 	boolean player;
 	
 	TicTacToe(){
-		
 		textfield.setBackground(new Color(224,238,238));
 		textfield.setForeground(new Color(139,71,93));
 		textfield.setFont(new Font("Serif",Font.BOLD,60));
@@ -117,6 +116,7 @@ public class TicTacToe implements ActionListener{
 		}
 		
 		// Player O win conditions;
+		
 		if((buttons[0].getText()=="O")&&(buttons[1].getText()=="O")&&(buttons[2].getText()=="O")) {
 			oWins(0,1,2);
 		}
