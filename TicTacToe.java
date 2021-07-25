@@ -150,13 +150,13 @@ public class TicTacToe implements ActionListener{
 		for(int x=0;x<9;x++) {			
 			buttons[x].setEnabled(false);
 		}
-		textfield.setText("Winner Player X");
+		textfield.setText("Winner X");
 	}
 	
 	public void oWins(int a, int b, int c) {	
 		for(int x=0;x<9;x++) {
 			buttons[x].setEnabled(false);
 		}
-		textfield.setText("Winner Player O");
+		textfield.setText("Winner O");
 	}
 }		
