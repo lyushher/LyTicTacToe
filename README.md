@@ -1,3 +1,3 @@
-## 2D TicTacToe Game
+## TicTacToe Game
 
 New features coming soon..
